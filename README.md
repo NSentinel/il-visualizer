@@ -1,19 +1,20 @@
+# Forked
+
+for Visual Studio 2017, remove Non-modal Visualizer.
+
+Built binary is exists in [neuecc/il-visualizer/releases](https://github.com/neuecc/il-visualizer/releases) page.
+
 # IL Visualiser
 
-Originally developed by Haibo Luo in 2005 and posted in a series of blog posts 
-([part one](https://blogs.msdn.microsoft.com/haibo_luo/2005/10/25/debuggervisualizer-for-dynamicmethod-show-me-the-il/),
-[part two](https://blogs.msdn.microsoft.com/haibo_luo/2006/11/16/take-two-il-visualizer/)).
+Originally developed by Haibo Luo in 2005 and posted in a series of blog posts ([part one](https://blogs.msdn.microsoft.com/haibo_luo/2005/10/25/debuggervisualizer-for-dynamicmethod-show-me-the-il/), [part two](https://blogs.msdn.microsoft.com/haibo_luo/2006/11/16/take-two-il-visualizer/)).
 
 Converted to a Git repository and upgraded to Visual Studio 2015 by Drew Noakes
 
 ## Usage
 
-When paused in the debugger, select an instance of a subclass of `MethodBase` (such as `DynamicMethod`,
-`MethodBuilder`, `ConstructorBuilder`, ...) and launch a visualiser:
+When paused in the debugger, select an instance of a subclass of `MethodBase` (such as `DynamicMethod`, `MethodBuilder`, `ConstructorBuilder`, ...) and launch a visualiser:
 
 ![](Images/launching-visualizer.png)
-
-There are two ways to use this visualiser.
 
 ### IL Visualizer (Modal)
 
@@ -22,15 +23,6 @@ Selecting _"IL Visualizer"_ pops up a window showing the IL code.
 ![](Images/il-visualizer.png)
 
 This window is modal and debugging may only continue once the window is closed.
-
-### Out of Process (Non-modal)
-
-Sometimes you don't want to close the window before continuing your debugging session. For such cases, you 
-can run _IL Monitor_ as a separate process, then select _"Send to IL Monitor"_:
-
-![](Images/il-monitor.png)
-
-IL Monitor is a standalone MDI application that allows displaying mutliple IL views.
 
 ## Installation
 
@@ -47,8 +39,6 @@ IL Monitor is a standalone MDI application that allows displaying mutliple IL vi
     > _VisualStudioInstallPath_\Common7\Packages\Debugger\Visualizers
 
 3. Restart the debugging session (you don't have to restart Visual Studio)
-
-If you wish to use _Send to IL Monitor_, you run `ILDebugging.Monitor.exe` before attempting to use it from the debugger.
 
 ## Earlier Visual Studio Versions
 
